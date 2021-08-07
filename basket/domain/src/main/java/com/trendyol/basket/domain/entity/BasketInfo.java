@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BasketInfo {
     private BigDecimal subTotal;
-    private List<BasketCampaign> basketCampaigns;
+    private BasketCampaign basketCampaigns;
     private BigDecimal grandTotal;
 
     public BasketInfo() {
@@ -27,7 +27,7 @@ public class BasketInfo {
         return subTotal;
     }
 
-    public List<BasketCampaign> getCampaigns() {
+    public BasketCampaign getCampaigns() {
         return basketCampaigns;
     }
 
@@ -46,21 +46,14 @@ public class BasketInfo {
             throw new BasketInfoValidationException();
         }
         addCampaign(campaignDisplayName, campaignPrice);
-        grandTotal = basketCampaigns.stream()
-                .map(BasketCampaign::getPrice)
-                .reduce(BigDecimal.ZERO, BigDecimal::add).add(subTotal);
+        grandTotal = basketCampaigns.getPrice().add(subTotal);
     }
 
     private void addCampaign(String displayName, BigDecimal price){
-        if(basketCampaigns == null){
-            basketCampaigns = new ArrayList<>();
-        }
         var campaign = new BasketCampaign(displayName, price);
-        basketCampaigns.add(campaign);
+        basketCampaigns=campaign;
     }
 
-    public void clearCampaigns(){
-        basketCampaigns.clear();
-    }
+
 
 }

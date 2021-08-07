@@ -6,6 +6,9 @@ public class CampaignDTO {
     private String displayName;
     private BigDecimal price;
 
+    public CampaignDTO() {
+    }
+
     public CampaignDTO(String displayName, BigDecimal price) {
         this.displayName = displayName;
         this.price = price;

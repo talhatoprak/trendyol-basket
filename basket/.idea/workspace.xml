@@ -4,13 +4,88 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52e0b52-801e-4b4b-a701-deef4e170270" name="Default Changelist" comment="" />
+    <list default="true" id="e52e0b52-801e-4b4b-a701-deef4e170270" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/trendol-final-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campaign/src/main/java/com/trendyol/campaign/entity/Campaign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campaign/src/main/java/com/trendyol/campaign/repository/CampaignRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/controller/BasketController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/converter/Converter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/converter/impl/BasketDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/converter/impl/BasketInfoDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/converter/impl/BasketItemDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/converter/impl/CampaignDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/converter/impl/CampaignProductInfoDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/exception/ProductStockValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/campaign/CampaignService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/campaign/model/CampaignProductInfoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/campaign/request/GetCampaignRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/campaign/response/GetCampaignResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/customer/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/customer/request/GetCustomerRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/customer/response/GetCustomerResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/product/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/product/request/GetProductRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/externalservice/product/response/GetProductResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/manager/BasketManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/manager/impl/BasketManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/ApiResponse$ApiResponseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/ApiResponse$ApiResponseBuilderWithData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/ApiResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/dto/BasketDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/dto/BasketInfoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/dto/BasketItemDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/dto/CampaignDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/dto/ProductInfoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/request/AddToBasketRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/request/GetBasketRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/request/UpdateBasketRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/response/AddToBasketResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/response/GetBasketResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/target/classes/com/trendyol/basket/application/model/response/UpdateBasketResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/entity/Basket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/entity/BasketCampaign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/entity/BasketInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/entity/BasketItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/exception/BasketInfoValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/exception/BasketNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/exception/BasketValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/exception/ProductNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/exception/base/BaseException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/repository/BasketRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/service/BasketService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/trendyol/basket/domain/service/impl/BasketServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/config/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/config/RestTemplateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/exceptionhandler/CustomExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/campaign/CampaignServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/product/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/product/dto/ProductDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/repository/BasketRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/repository/jpaRepository/BasketCrudRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/classes/com/trendyol/basket/infrastructure/rest/BasketRestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/target/test-classes/com/trendyol/basket/infrastructure/RedisConnectionTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1wB02lsKWSCxxsedoj0TqdhxAcm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,16 +95,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/arma" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -44,10 +128,22 @@
       <option name="presentableId" value="Default" />
       <updated>1627916474210</updated>
       <workItem from="1627916475840" duration="279000" />
+      <workItem from="1628337288141" duration="321000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

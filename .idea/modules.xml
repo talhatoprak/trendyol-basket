@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basket/application/application.iml" filepath="$PROJECT_DIR$/basket/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basket/basket.iml" filepath="$PROJECT_DIR$/basket/basket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/campaign/campaign.iml" filepath="$PROJECT_DIR$/campaign/campaign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basket/domain/domain.iml" filepath="$PROJECT_DIR$/basket/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basket/infrastructure/infrastructure.iml" filepath="$PROJECT_DIR$/basket/infrastructure/infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/trendol-final-project.iml" filepath="$PROJECT_DIR$/.idea/trendol-final-project.iml" />
+    </modules>
+  </component>
+</project>

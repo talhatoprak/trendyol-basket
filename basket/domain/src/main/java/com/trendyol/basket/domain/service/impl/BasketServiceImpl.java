@@ -29,7 +29,7 @@ public class BasketServiceImpl implements BasketService {
             basket = new Basket(customerId, productInfo);
         } else {
             basket = optionalBasket.get();
-            var optProductInfo = basket.getProducts().stream().filter(pi -> pi.getProductId() == productId).findFirst();
+            var optProductInfo = basket.getProducts().stream().filter(pi -> pi.getProductId().equals(productId)).findFirst();
             if (optProductInfo.isEmpty()) {
                 basket.addItemToBasket(productInfo);
             } else {
@@ -69,15 +69,7 @@ public class BasketServiceImpl implements BasketService {
         basketRepository.save(basket);
     }
 
-    @Override
-    public void clearBasketCampaigns(long customerId) {
-        var optionalBasket = basketRepository.findByCustomerId(customerId);
-        if (optionalBasket.isEmpty())
-            throw new BasketNotFoundException();
-        var basket = optionalBasket.get();
-        basket.getBasketInfo().clearCampaigns();
-        basketRepository.save(basket);
-    }
+
 
     @Override
     public List<Basket> getByProductId(String productId) {

@@ -4,21 +4,27 @@ import com.trendyol.basket.application.converter.impl.BasketDtoConverter;
 import com.trendyol.basket.application.converter.impl.CampaignProductInfoDtoConverter;
 import com.trendyol.basket.application.exception.ProductStockValidationException;
 import com.trendyol.basket.application.externalservice.campaign.CampaignService;
+import com.trendyol.basket.application.externalservice.campaign.model.CampaignProductInfoDTO;
 import com.trendyol.basket.application.externalservice.campaign.request.GetCampaignRequest;
 import com.trendyol.basket.application.externalservice.campaign.response.GetCampaignResponse;
 import com.trendyol.basket.application.externalservice.product.ProductService;
 import com.trendyol.basket.application.externalservice.product.request.GetProductRequest;
 import com.trendyol.basket.application.manager.BasketManager;
+import com.trendyol.basket.application.model.dto.CampaignDTO;
+import com.trendyol.basket.application.model.dto.ProductInfoDTO;
 import com.trendyol.basket.application.model.request.AddToBasketRequest;
 import com.trendyol.basket.application.model.request.GetBasketRequest;
 import com.trendyol.basket.application.model.request.UpdateBasketRequest;
 import com.trendyol.basket.application.model.response.AddToBasketResponse;
 import com.trendyol.basket.application.model.response.GetBasketResponse;
 import com.trendyol.basket.application.model.response.UpdateBasketResponse;
+import com.trendyol.basket.domain.entity.Basket;
 import com.trendyol.basket.domain.entity.BasketItem;
 import com.trendyol.basket.domain.service.BasketService;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -68,12 +74,12 @@ public class BasketManagerImpl implements BasketManager {
                 productResponse.getProductDTO().getId(),
                 productResponse.getProductDTO().getImageUrl(),
                 productResponse.getProductDTO().getTitle(),
-                productResponse.getProductDTO().getQuantity(),
+                addToBasketRequest.getQuantity(),
                 productResponse.getProductDTO().getPrice(),
                 productResponse.getProductDTO().getOldPrice());
         var getCampaignRequest = prepareGetCampaignRequest(basket.getCustomerId(), basket.getProducts());
         var campaignResponse = campaignService.get(getCampaignRequest);
-        UpdateBasketInfoWithCampaign(campaignResponse,addToBasketRequest.getCustomerId());
+        UpdateBasketInfoWithCampaign(campaignResponse, addToBasketRequest.getCustomerId());
 
         return new AddToBasketResponse();
     }
@@ -90,7 +96,7 @@ public class BasketManagerImpl implements BasketManager {
                 updateBasketRequest.getQuantity());
         var getCampaignRequest = prepareGetCampaignRequest(basket.getCustomerId(), basket.getProducts());
         var campaignResponse = campaignService.get(getCampaignRequest);
-        UpdateBasketInfoWithCampaign(campaignResponse,updateBasketRequest.getCustomerId());
+        UpdateBasketInfoWithCampaign(campaignResponse, updateBasketRequest.getCustomerId());
 
         return new UpdateBasketResponse();
     }
@@ -102,18 +108,26 @@ public class BasketManagerImpl implements BasketManager {
     }
 
     private GetCampaignRequest prepareGetCampaignRequest(long customerId, List<BasketItem> productInfos) {
+        List<CampaignProductInfoDTO> productInfoDTOS=new ArrayList<>();
+        BigDecimal productTotalPrice=BigDecimal.valueOf(0);
+        for (int i = 0; i < productInfos.size(); i++) {
+            BasketItem product=productInfos.get(i);
+            productInfoDTOS.add(campaignProductInfoDtoConverter.convert(product));
+            BigDecimal total=BigDecimal.valueOf(product.getQuantity());
+            total= total.multiply(product.getPrice());
+            productTotalPrice=productTotalPrice.add(total);
+        }
         var getCampaignProductDTOs = productInfos.stream()
                 .map(campaignProductInfoDtoConverter::convert)
                 .collect(Collectors.toList());
-        var getCampaignRequest = new GetCampaignRequest(customerId, getCampaignProductDTOs);
+        var getCampaignRequest = new GetCampaignRequest(customerId, getCampaignProductDTOs,productTotalPrice);
         return getCampaignRequest;
     }
 
-    private void UpdateBasketInfoWithCampaign(GetCampaignResponse getCampaignResponse,long customerId) {
-        basketService.clearBasketCampaigns(customerId);
-        getCampaignResponse.getCampaignDTOs().forEach(campaignDTO -> {
-            basketService.addCampaignToBasket(customerId, campaignDTO.getDisplayName(), campaignDTO.getPrice());
-        });
+    private void UpdateBasketInfoWithCampaign(GetCampaignResponse getCampaignResponse, long customerId) {
+
+        CampaignDTO campaign = getCampaignResponse.getCampaignDTO();
+        basketService.addCampaignToBasket(customerId, campaign.getDisplayName(), campaign.getPrice());
     }
 
     @Override

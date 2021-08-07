@@ -5,13 +5,17 @@ import com.trendyol.basket.application.model.dto.CampaignDTO;
 import java.util.List;
 
 public class GetCampaignResponse {
-    private List<CampaignDTO> campaignDTOs;
+    private CampaignDTO campaignDTO;
 
-    public List<CampaignDTO> getCampaignDTOs() {
-        return campaignDTOs;
+    public GetCampaignResponse(CampaignDTO campaignDTO) {
+        this.campaignDTO = campaignDTO;
     }
 
-    public void setCampaignDTOs(List<CampaignDTO> campaignDTOs) {
-        this.campaignDTOs = campaignDTOs;
+    public CampaignDTO getCampaignDTO() {
+        return campaignDTO;
+    }
+
+    public void setCampaignDTOs(CampaignDTO campaignDTO) {
+        this.campaignDTO = campaignDTO;
     }
 }

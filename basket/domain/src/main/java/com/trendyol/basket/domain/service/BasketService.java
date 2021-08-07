@@ -10,6 +10,5 @@ public interface BasketService {
     Basket update(long customerId, String productId, int quantity);
     Basket getByCustomerId(long customerId);
     void addCampaignToBasket(long customerId, String campaignDisplayName, BigDecimal campaignPrice);
-    void clearBasketCampaigns(long customerId);
     List<Basket> getByProductId(String productId);
 }

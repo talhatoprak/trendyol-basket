@@ -19,9 +19,7 @@ public class BasketInfoDtoConverter implements Converter<BasketInfo, BasketInfoD
     @Override
     public BasketInfoDTO convert(BasketInfo basketInfo) {
         var basketInfoDTO = new BasketInfoDTO();
-        var campaignDTOs = basketInfo.getCampaigns().stream()
-                .map(campaignDtoConverter::convert)
-                .collect(Collectors.toList());
+        var campaignDTOs = campaignDtoConverter.convert(basketInfo.getCampaigns());
         basketInfoDTO.setCampaignDTOs(campaignDTOs);
         basketInfoDTO.setSubTotal(basketInfo.getSubTotal());
         basketInfoDTO.setGrandTotal(basketInfo.getGrandTotal());

@@ -5,14 +5,14 @@ import java.util.List;
 
 public class BasketInfoDTO {
     private BigDecimal subTotal;
-    private List<CampaignDTO> campaignDTOs;
+    private CampaignDTO campaignDTOs;
     private BigDecimal grandTotal;
 
-    public List<CampaignDTO> getCampaignDTOs() {
+    public CampaignDTO getCampaignDTOs() {
         return campaignDTOs;
     }
 
-    public void setCampaignDTOs(List<CampaignDTO> campaignDTOs) {
+    public void setCampaignDTOs(CampaignDTO campaignDTOs) {
         this.campaignDTOs = campaignDTOs;
     }
 
