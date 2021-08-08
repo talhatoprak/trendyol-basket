@@ -11,7 +11,7 @@ public interface BasketManager {
     UpdateBasketResponse update(UpdateBasketRequest updateBasketRequest);
     GetBasketResponse get(GetBasketRequest getBasketRequest);
     void productPriceChange(ChangeProductPriceRequest changeProductPriceRequest);
-
     void productStockChange(ChangeProductStockRequest changeProductStockRequest);
+    void removeItem(RemoveBasketItemRequest removeBasketItemRequest);
 }
 

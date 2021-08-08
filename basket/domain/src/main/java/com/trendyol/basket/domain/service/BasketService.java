@@ -9,9 +9,11 @@ public interface BasketService {
     Basket add(long customerId, String productId, String imageUrl, String title, int quantity, double price, double oldPrice);
     Basket update(long customerId, String productId, int quantity);
     Basket getByCustomerId(long customerId);
-    void addCampaignToBasket(long customerId, String campaignDisplayName, double campaignPrice);
+    Basket addCampaignToBasket(long customerId, String campaignDisplayName, double campaignPrice);
     List<Basket> getByProductId(String productId);
-    void changeProductPrice(String productId,double price);
+    Basket save(Basket basket);
 
     void changeProductStock(String productId, int newQuantity);
+
+    Basket removeBasketItem(long customerId, String productId, int count);
 }

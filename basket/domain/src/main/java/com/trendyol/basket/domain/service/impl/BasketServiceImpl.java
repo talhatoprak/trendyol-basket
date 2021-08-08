@@ -55,13 +55,15 @@ public class BasketServiceImpl implements BasketService {
     }
 
     @Override
-    public void addCampaignToBasket(long customerId, String campaignDisplayName, double campaignPrice) {
+    public Basket addCampaignToBasket(long customerId, String campaignDisplayName, double campaignPrice) {
         var optionalBasket = basketRepository.findByCustomerId(customerId);
         if (optionalBasket.isEmpty())
             throw new BasketNotFoundException();
         var basket = optionalBasket.get();
+        basket.getBasketInfo().updateSubTotal(basket.getProducts());
         basket.getBasketInfo().updateGrandTotalWithCampaign(campaignDisplayName, campaignPrice);
         basketRepository.save(basket);
+        return basket;
     }
 
 
@@ -76,14 +78,11 @@ public class BasketServiceImpl implements BasketService {
     }
 
     @Override
-    public void changeProductPrice(String productId, double price) {
-        List<Basket> basketList = getByProductId(productId);
-        for (int i = 0; i < basketList.size(); i++) {
-            Basket basket = basketList.get(i);
-            basket.setProductPrice(productId, price);
-            basketRepository.save(basket);
-        }
+    public Basket save(Basket basket) {
+         basketRepository.save(basket);
+         return basket;
     }
+
 
     @Override
     public void changeProductStock(String productId, int newQuantity) {
@@ -99,5 +98,13 @@ public class BasketServiceImpl implements BasketService {
                 basketRepository.save(basket);
             }
         }
+    }
+
+    @Override
+    public Basket removeBasketItem(long customerId, String productId, int count) {
+        Basket basket=getByCustomerId(customerId);
+        basket.removeItem(productId,count);
+        basketRepository.save(basket);
+        return basket;
     }
 }

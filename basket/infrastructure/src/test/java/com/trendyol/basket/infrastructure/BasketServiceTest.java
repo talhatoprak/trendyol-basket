@@ -14,10 +14,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ContextConfiguration
 @SpringBootTest
-public class RedisConnectionTest {
+public class BasketServiceTest {
     private final BasketCrudRepository basketCrudRepository;
     private final BasketManager basketManager;
-    public RedisConnectionTest(@Autowired BasketCrudRepository basketCrudRepository,@Autowired  BasketManager basketManager) {
+    public BasketServiceTest(@Autowired BasketCrudRepository basketCrudRepository, @Autowired  BasketManager basketManager) {
 
         this.basketCrudRepository = basketCrudRepository;
         this.basketManager = basketManager;

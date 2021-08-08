@@ -5,18 +5,17 @@ import com.trendyol.basket.application.manager.BasketManager;
 import com.trendyol.basket.application.model.ApiResponse;
 import com.trendyol.basket.application.model.request.AddToBasketRequest;
 import com.trendyol.basket.application.model.request.GetBasketRequest;
+import com.trendyol.basket.application.model.request.RemoveBasketItemRequest;
 import com.trendyol.basket.application.model.request.UpdateBasketRequest;
 import com.trendyol.basket.application.model.response.AddToBasketResponse;
 import com.trendyol.basket.application.model.response.GetBasketResponse;
+import com.trendyol.basket.application.model.response.RemoveBasketItemResponse;
 import com.trendyol.basket.application.model.response.UpdateBasketResponse;
 import com.trendyol.basket.domain.entity.Basket;
 import com.trendyol.basket.domain.entity.BasketItem;
 import com.trendyol.basket.infrastructure.repository.BasketRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.math.BigDecimal;
@@ -34,7 +33,7 @@ public class BasketRestController implements BasketController {
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
     @Override
-    public ApiResponse<AddToBasketResponse> add(AddToBasketRequest addToBasketRequest) {
+    public ApiResponse<AddToBasketResponse> add(@RequestBody AddToBasketRequest addToBasketRequest) {
         var response = basketManager.add(addToBasketRequest);
         return ApiResponse.ApiResponseBuilderWithData
                 .builder()
@@ -44,7 +43,7 @@ public class BasketRestController implements BasketController {
 
     @RequestMapping(value = "update", method = RequestMethod.POST)
     @Override
-    public ApiResponse<UpdateBasketResponse> update(UpdateBasketRequest updateBasketRequest) {
+    public ApiResponse<UpdateBasketResponse> update(@RequestBody UpdateBasketRequest updateBasketRequest) {
         var response = basketManager.update(updateBasketRequest);
         return ApiResponse.ApiResponseBuilderWithData
                 .builder()
@@ -61,5 +60,11 @@ public class BasketRestController implements BasketController {
                 .builder()
                 .setData(response)
                 .build();
+    }
+
+    @RequestMapping(value = "remove", method = RequestMethod.POST)
+    @Override
+    public void remove(@RequestBody RemoveBasketItemRequest removeBasketItemRequest) {
+        basketManager.removeItem(removeBasketItemRequest);
     }
 }

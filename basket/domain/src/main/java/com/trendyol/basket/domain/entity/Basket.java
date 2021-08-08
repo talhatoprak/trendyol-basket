@@ -105,12 +105,29 @@ public class Basket implements Serializable {
         return basketString;
     }
 
-    public void setProductPrice(String productId, double price) {
+    public void setProductPrice(String productId, double price, double oldPrice) {
         products.stream()
                 .filter(productInfo -> productInfo.getProductId().equals(productId))
                 .findFirst()
-                .ifPresentOrElse(productInfo -> productInfo.setPrice(price), ProductNotFoundException::new);
+                .ifPresentOrElse(productInfo -> {
+                    productInfo.setPrice(price);
+                    productInfo.setOldPrice(oldPrice);
+                }, ProductNotFoundException::new);
         basketInfo.updateSubTotal(products);
 
+    }
+
+    public void removeItem(String productId, int count) {
+        BasketItem item = products.stream()
+                .filter(product -> product.getProductId().equals(productId))
+                .findFirst()
+                .orElseThrow(ProductNotFoundException::new);
+        int quantity = item.getQuantity();
+        if (quantity <= count) {
+            products.remove(item);
+        } else {
+            item.setQuantity(item.getQuantity() - count);
+        }
+        basketInfo.updateSubTotal(products);
     }
 }
