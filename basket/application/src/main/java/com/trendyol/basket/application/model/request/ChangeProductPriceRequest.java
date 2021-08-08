@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 
 public class ChangeProductPriceRequest {
     private String productId;
-    private BigDecimal oldPrice;
-    private BigDecimal newPrice;
+    private double oldPrice;
+    private double newPrice;
 
-    public ChangeProductPriceRequest(String productId, BigDecimal oldPrice, BigDecimal newPrice) {
+    public ChangeProductPriceRequest(String productId, double oldPrice, double newPrice) {
         this.productId = productId;
         this.oldPrice = oldPrice;
         this.newPrice = newPrice;
@@ -21,19 +21,19 @@ public class ChangeProductPriceRequest {
         this.productId = productId;
     }
 
-    public BigDecimal getOldPrice() {
+    public double getOldPrice() {
         return oldPrice;
     }
 
-    public void setOldPrice(BigDecimal oldPrice) {
+    public void setOldPrice(double oldPrice) {
         this.oldPrice = oldPrice;
     }
 
-    public BigDecimal getNewPrice() {
+    public double getNewPrice() {
         return newPrice;
     }
 
-    public void setNewPrice(BigDecimal newPrice) {
+    public void setNewPrice(double newPrice) {
         this.newPrice = newPrice;
     }
 }

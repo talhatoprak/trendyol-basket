@@ -18,13 +18,13 @@ public class BasketItem implements Serializable {
     public BasketItem() {
     }
 
-    public BasketItem(String productId, String title, String imageUrl, int quantity, BigDecimal oldPrice, BigDecimal price) {
+    public BasketItem(String productId, String title, String imageUrl, int quantity, double oldPrice, double price) {
         this.productId = productId;
         this.title = title;
         this.imageUrl = imageUrl;
         this.quantity = quantity;
-        this.oldPrice = oldPrice.doubleValue();
-        this.price = price.doubleValue();
+        this.oldPrice = oldPrice;
+        this.price = price;
     }
 
     public String getProductId() {

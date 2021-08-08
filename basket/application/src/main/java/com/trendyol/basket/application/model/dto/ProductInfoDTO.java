@@ -1,21 +1,19 @@
 package com.trendyol.basket.application.model.dto;
 
 
-import java.math.BigDecimal;
-
 public class ProductInfoDTO {
     private String id;
     private String imageUrl;
     private String title;
     private int quantity;
-    private BigDecimal price;
-    private BigDecimal oldPrice;
+    private double price;
+    private double oldPrice;
 
-    public BigDecimal getOldPrice() {
+    public double getOldPrice() {
         return oldPrice;
     }
 
-    public void setOldPrice(BigDecimal oldPrice) {
+    public void setOldPrice(double oldPrice) {
         this.oldPrice = oldPrice;
     }
 
@@ -51,11 +49,11 @@ public class ProductInfoDTO {
         this.quantity = quantity;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

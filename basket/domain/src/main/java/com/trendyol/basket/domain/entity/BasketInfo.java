@@ -2,7 +2,6 @@ package com.trendyol.basket.domain.entity;
 
 import com.trendyol.basket.domain.exception.BasketInfoValidationException;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +40,7 @@ public class BasketInfo {
                 .reduce(0D,Double::sum);
     }
 
-    public void updateGrandTotalWithCampaign(String campaignDisplayName, BigDecimal campaignPrice){
+    public void updateGrandTotalWithCampaign(String campaignDisplayName, double campaignPrice){
         if(campaignDisplayName == null || campaignDisplayName.isEmpty()){
             throw new BasketInfoValidationException();
         }
@@ -49,8 +48,8 @@ public class BasketInfo {
         grandTotal = basketCampaigns.getPrice() + subTotal;
     }
 
-    private void addCampaign(String displayName, BigDecimal price){
-        var campaign = new BasketCampaign(displayName, price.doubleValue());
+    private void addCampaign(String displayName, double price){
+        var campaign = new BasketCampaign(displayName, price);
         basketCampaigns=campaign;
     }
 

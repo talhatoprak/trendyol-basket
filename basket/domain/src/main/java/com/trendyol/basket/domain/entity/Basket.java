@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.couchbase.core.mapping.Document;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -69,7 +68,15 @@ public class Basket implements Serializable {
     }
 
     public void addItemToBasket(BasketItem productInfo) {
-        products.add(productInfo);
+        var optProductInfo = products.stream()
+                .filter(pi -> pi.getProductId().equals(productInfo.getProductId()))
+                .findFirst();
+        if (optProductInfo.isEmpty()) {
+            products.add(productInfo);
+        } else {
+            var existProductInfo = optProductInfo.get();
+            existProductInfo.setQuantity(existProductInfo.getQuantity() + productInfo.getQuantity());
+        }
         basketInfo.updateSubTotal(products);
     }
 
@@ -98,20 +105,12 @@ public class Basket implements Serializable {
         return basketString;
     }
 
-    public void setProductPrice(String productId, BigDecimal price) {
+    public void setProductPrice(String productId, double price) {
         products.stream()
                 .filter(productInfo -> productInfo.getProductId().equals(productId))
                 .findFirst()
-                .ifPresentOrElse(productInfo -> productInfo.setPrice(price.doubleValue()), ProductNotFoundException::new);
+                .ifPresentOrElse(productInfo -> productInfo.setPrice(price), ProductNotFoundException::new);
         basketInfo.updateSubTotal(products);
-     /*   Optional<BasketItem> basketItemOptional = products.
-                        stream()
-                        .filter(f -> f.getProductId()
-                        .equals(productId)).
-                        findFirst();
-        if(basketItemOptional.isEmpty())
-            return;
-        BasketItem basketItem= basketItemOptional.get();
-        basketItem.setPrice(price);*/
+
     }
 }

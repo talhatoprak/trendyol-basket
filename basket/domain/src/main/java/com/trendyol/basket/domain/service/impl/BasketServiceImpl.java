@@ -22,7 +22,7 @@ public class BasketServiceImpl implements BasketService {
 
     @Override
     public Basket add(long customerId, String productId,
-                      String imageUrl, String title, int quantity, BigDecimal price, BigDecimal oldPrice) {
+                      String imageUrl, String title, int quantity, double price, double oldPrice) {
         var optionalBasket = basketRepository.findByCustomerId(customerId);
         var productInfo = new BasketItem(productId, imageUrl, title, quantity, price, oldPrice);
         Basket basket;
@@ -30,13 +30,7 @@ public class BasketServiceImpl implements BasketService {
             basket = new Basket(customerId, productInfo);
         } else {
             basket = optionalBasket.get();
-            var optProductInfo = basket.getProducts().stream().filter(pi -> pi.getProductId().equals(productId)).findFirst();
-            if (optProductInfo.isEmpty()) {
-                basket.addItemToBasket(productInfo);
-            } else {
-                var existProductInfo = optProductInfo.get();
-                existProductInfo.setQuantity(existProductInfo.getQuantity() + quantity);
-            }
+            basket.addItemToBasket(productInfo);
         }
         basketRepository.save(basket);
         return basket;
@@ -61,7 +55,7 @@ public class BasketServiceImpl implements BasketService {
     }
 
     @Override
-    public void addCampaignToBasket(long customerId, String campaignDisplayName, BigDecimal campaignPrice) {
+    public void addCampaignToBasket(long customerId, String campaignDisplayName, double campaignPrice) {
         var optionalBasket = basketRepository.findByCustomerId(customerId);
         if (optionalBasket.isEmpty())
             throw new BasketNotFoundException();
@@ -82,7 +76,7 @@ public class BasketServiceImpl implements BasketService {
     }
 
     @Override
-    public void changeProductPrice(String productId, BigDecimal price) {
+    public void changeProductPrice(String productId, double price) {
         List<Basket> basketList = getByProductId(productId);
         for (int i = 0; i < basketList.size(); i++) {
             Basket basket = basketList.get(i);

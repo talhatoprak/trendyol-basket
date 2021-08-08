@@ -124,7 +124,7 @@ public class BasketManagerImpl implements BasketManager {
     private void UpdateBasketInfoWithCampaign(GetCampaignResponse getCampaignResponse, long customerId) {
 
         CampaignDTO campaign = getCampaignResponse.getCampaignDTO();
-        basketService.addCampaignToBasket(customerId, campaign.getDisplayName(), BigDecimal.valueOf(campaign.getPrice()));
+        basketService.addCampaignToBasket(customerId, campaign.getDisplayName(), campaign.getPrice());
     }
 
     @Override

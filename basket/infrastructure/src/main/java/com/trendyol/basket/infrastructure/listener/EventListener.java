@@ -8,7 +8,6 @@ import com.trendyol.basket.application.model.request.ChangeProductStockRequest;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
 
 @Component
 public class EventListener {
@@ -23,8 +22,8 @@ public class EventListener {
     public void listenPriceChange(PriceChangeEvent event)
     {
         System.out.format("priceChangeEvent: %s\n", event.toString());
-        BigDecimal oldPrice=BigDecimal.valueOf(event.getOldPrice());
-        BigDecimal newPrice=BigDecimal.valueOf(event.getNewPrice());
+        double oldPrice=event.getOldPrice();
+        double newPrice=event.getNewPrice();
         basketManager.productPriceChange(new ChangeProductPriceRequest(event.getProductId(),oldPrice,newPrice));
 
 

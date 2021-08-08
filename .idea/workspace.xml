@@ -5,108 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d3a69b-896b-4547-92b3-53a6a7a1efc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_couchbase_client_core_io_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_couchbase_client_core_io_2_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_couchbase_client_java_client_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_couchbase_client_java_client_3_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_luben_zstd_jni_1_4_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_0_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_11_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_couchbase_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_couchbase_4_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_2_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/events/PriceChangeEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/events/StockChangeEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/request/ChangeProductPriceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/request/ChangeProductStockRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/config/CouchbaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/listener/EventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_3_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_51_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_51_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_51_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_51_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_51_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_51_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_31.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_3_3_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_3_0.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basket/domain/src/test/java/com/trendyol/basket/domain/BasketEntityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/converter/impl/BasketInfoDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/converter/impl/BasketInfoDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/converter/impl/BasketItemDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/converter/impl/BasketItemDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/manager/BasketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/manager/BasketManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/manager/impl/BasketManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/manager/impl/BasketManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/dto/CampaignDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/dto/CampaignDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/converter/impl/BasketInfoDtoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/converter/impl/BasketInfoDtoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/converter/impl/BasketItemDtoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/converter/impl/BasketItemDtoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/converter/impl/CampaignDtoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/converter/impl/CampaignDtoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/manager/BasketManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/manager/BasketManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/dto/ProductInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/dto/ProductInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/request/ChangeProductPriceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/src/main/java/com/trendyol/basket/application/model/request/ChangeProductPriceRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/manager/impl/BasketManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/manager/impl/BasketManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/model/dto/CampaignDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/model/dto/CampaignDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/model/dto/ProductInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/model/dto/ProductInfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/model/request/ChangeProductPriceRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/application/target/classes/com/trendyol/basket/application/model/request/ChangeProductPriceRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/domain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/Basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/BasketCampaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/BasketCampaign.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/BasketInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/BasketInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/BasketItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/entity/BasketItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/service/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/service/BasketService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/service/impl/BasketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/src/main/java/com/trendyol/basket/domain/service/impl/BasketServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/Basket.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/Basket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/BasketCampaign.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/BasketCampaign.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/BasketInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/BasketInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/BasketItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/entity/BasketItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/service/BasketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/service/BasketService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/service/impl/BasketServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/domain/target/classes/com/trendyol/basket/domain/service/impl/BasketServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/infrastructure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/infrastructure.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/config/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/repository/BasketRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/repository/BasketRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/repository/jpaRepository/BasketCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/repository/jpaRepository/BasketCrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/src/test/java/com/trendyol/basket/infrastructure/RedisConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/src/test/java/com/trendyol/basket/infrastructure/RedisConnectionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/exceptionhandler/CustomExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/exceptionhandler/CustomExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/campaign/CampaignServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/campaign/CampaignServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/product/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/externalservice/product/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/repository/BasketRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/repository/BasketRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/repository/jpaRepository/BasketCrudRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/repository/jpaRepository/BasketCrudRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/rest/BasketRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/rest/BasketRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/test-classes/com/trendyol/basket/infrastructure/RedisConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/test-classes/com/trendyol/basket/infrastructure/RedisConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/listener/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/listener/EventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/listener/EventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/basket/infrastructure/target/classes/com/trendyol/basket/infrastructure/listener/EventListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,13 +72,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/campaign/src/main/java/com/trendyol/campaign/model/campaign" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/arma" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/trendy-final/trendy-final" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.RedisConnectionTest.addToBasket">
+  <component name="RunManager" selected="JUnit.BasketEntityTest.should_calculate_totals_when_added_product">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -165,62 +90,81 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CampaignServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="campaign" />
+    <configuration name="BasketEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trendyol.campaign.service.*" />
+          <option name="PATTERN" value="com.trendyol.basket.domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trendyol.campaign.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trendyol.campaign.service.CampaignServiceTest" />
+      <option name="PACKAGE_NAME" value="com.trendyol.basket.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.trendyol.basket.domain.BasketEntityTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CampaignServiceTest.findbyPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="campaign" />
+    <configuration name="BasketEntityTest.should_add_basket_item" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trendyol.campaign.service.*" />
+          <option name="PATTERN" value="com.trendyol.basket.domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trendyol.campaign.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trendyol.campaign.service.CampaignServiceTest" />
-      <option name="METHOD_NAME" value="findbyPrice" />
+      <option name="PACKAGE_NAME" value="com.trendyol.basket.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.trendyol.basket.domain.BasketEntityTest" />
+      <option name="METHOD_NAME" value="should_add_basket_item" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedisConnectionTest.addToBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="infrastructure" />
+    <configuration name="BasketEntityTest.should_calculate_totals_when_added_product" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trendyol.basket.infrastructure.*" />
+          <option name="PATTERN" value="com.trendyol.basket.domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trendyol.basket.infrastructure" />
-      <option name="MAIN_CLASS_NAME" value="com.trendyol.basket.infrastructure.RedisConnectionTest" />
-      <option name="METHOD_NAME" value="addToBasket" />
+      <option name="PACKAGE_NAME" value="com.trendyol.basket.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.trendyol.basket.domain.BasketEntityTest" />
+      <option name="METHOD_NAME" value="should_calculate_totals_when_added_product" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="infrastructure" />
+    <configuration name="BasketEntityTest.should_increase_quantity_when_added_some_product" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trendyol.basket.infrastructure.*" />
+          <option name="PATTERN" value="com.trendyol.basket.domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.trendyol.basket.infrastructure.Application" />
+      <option name="PACKAGE_NAME" value="com.trendyol.basket.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.trendyol.basket.domain.BasketEntityTest" />
+      <option name="METHOD_NAME" value="should_increase_quantity_when_added_some_product" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasketEntityTest.when_customerId_less_than_0_while_creating_basket_then_throw_BasketValidationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trendyol.basket.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trendyol.basket.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.trendyol.basket.domain.BasketEntityTest" />
+      <option name="METHOD_NAME" value="when_customerId_less_than_0_while_creating_basket_then_throw_BasketValidationException" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -234,10 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RedisConnectionTest.addToBasket" />
-        <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="JUnit.CampaignServiceTest.findbyPrice" />
-        <item itemvalue="JUnit.CampaignServiceTest" />
+        <item itemvalue="JUnit.BasketEntityTest.should_calculate_totals_when_added_product" />
+        <item itemvalue="JUnit.BasketEntityTest.should_increase_quantity_when_added_some_product" />
+        <item itemvalue="JUnit.BasketEntityTest.should_add_basket_item" />
+        <item itemvalue="JUnit.BasketEntityTest" />
+        <item itemvalue="JUnit.BasketEntityTest.when_customerId_less_than_0_while_creating_basket_then_throw_BasketValidationException" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +196,7 @@
       <updated>1628337644905</updated>
       <workItem from="1628337648267" duration="1335000" />
       <workItem from="1628339240159" duration="18834000" />
-      <workItem from="1628394944503" duration="12534000" />
+      <workItem from="1628394944503" duration="17611000" />
     </task>
     <servers />
   </component>
@@ -288,12 +233,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/listener/EventListener.java</url>
-          <line>24</line>
+          <line>23</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basket/infrastructure/src/main/java/com/trendyol/basket/infrastructure/listener/EventListener.java</url>
-          <line>34</line>
+          <line>33</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

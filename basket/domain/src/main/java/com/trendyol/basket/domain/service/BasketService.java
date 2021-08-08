@@ -6,12 +6,12 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public interface BasketService {
-    Basket add(long customerId, String productId, String imageUrl, String title, int quantity, BigDecimal price, BigDecimal oldPrice);
+    Basket add(long customerId, String productId, String imageUrl, String title, int quantity, double price, double oldPrice);
     Basket update(long customerId, String productId, int quantity);
     Basket getByCustomerId(long customerId);
-    void addCampaignToBasket(long customerId, String campaignDisplayName, BigDecimal campaignPrice);
+    void addCampaignToBasket(long customerId, String campaignDisplayName, double campaignPrice);
     List<Basket> getByProductId(String productId);
-    void changeProductPrice(String productId,BigDecimal price);
+    void changeProductPrice(String productId,double price);
 
     void changeProductStock(String productId, int newQuantity);
 }
