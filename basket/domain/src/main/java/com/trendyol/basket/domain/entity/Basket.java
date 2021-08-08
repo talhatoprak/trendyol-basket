@@ -1,8 +1,9 @@
 package com.trendyol.basket.domain.entity;
 
+import com.couchbase.client.java.repository.annotation.Field;
 import com.trendyol.basket.domain.exception.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.couchbase.core.mapping.Document;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -11,11 +12,14 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-@RedisHash("Basket")
+
+@Document
 public class Basket implements Serializable {
     @Id
     private long customerId;
+    @Field
     private List<BasketItem> products;
+    @Field
     private BasketInfo basketInfo;
 
     public Basket() {
@@ -71,7 +75,7 @@ public class Basket implements Serializable {
 
     public void setProductQuantity(String productId, int quantity) {
         products.stream()
-                .filter(productInfo -> productInfo.getProductId() == productId)
+                .filter(productInfo -> productInfo.getProductId().equals(productId))
                 .findFirst()
                 .ifPresentOrElse(productInfo -> productInfo.setQuantity(quantity), ProductNotFoundException::new);
         basketInfo.updateSubTotal(products);
@@ -92,5 +96,22 @@ public class Basket implements Serializable {
         basketString += ", basketInfo=" + basketInfo.toString() +
                 '}';
         return basketString;
+    }
+
+    public void setProductPrice(String productId, BigDecimal price) {
+        products.stream()
+                .filter(productInfo -> productInfo.getProductId().equals(productId))
+                .findFirst()
+                .ifPresentOrElse(productInfo -> productInfo.setPrice(price.doubleValue()), ProductNotFoundException::new);
+        basketInfo.updateSubTotal(products);
+     /*   Optional<BasketItem> basketItemOptional = products.
+                        stream()
+                        .filter(f -> f.getProductId()
+                        .equals(productId)).
+                        findFirst();
+        if(basketItemOptional.isEmpty())
+            return;
+        BasketItem basketItem= basketItemOptional.get();
+        basketItem.setPrice(price);*/
     }
 }

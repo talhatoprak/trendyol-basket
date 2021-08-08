@@ -12,9 +12,7 @@ import com.trendyol.basket.application.externalservice.product.request.GetProduc
 import com.trendyol.basket.application.manager.BasketManager;
 import com.trendyol.basket.application.model.dto.CampaignDTO;
 import com.trendyol.basket.application.model.dto.ProductInfoDTO;
-import com.trendyol.basket.application.model.request.AddToBasketRequest;
-import com.trendyol.basket.application.model.request.GetBasketRequest;
-import com.trendyol.basket.application.model.request.UpdateBasketRequest;
+import com.trendyol.basket.application.model.request.*;
 import com.trendyol.basket.application.model.response.AddToBasketResponse;
 import com.trendyol.basket.application.model.response.GetBasketResponse;
 import com.trendyol.basket.application.model.response.UpdateBasketResponse;
@@ -113,9 +111,8 @@ public class BasketManagerImpl implements BasketManager {
         for (int i = 0; i < productInfos.size(); i++) {
             BasketItem product=productInfos.get(i);
             productInfoDTOS.add(campaignProductInfoDtoConverter.convert(product));
-            BigDecimal total=BigDecimal.valueOf(product.getQuantity());
-            total= total.multiply(product.getPrice());
-            productTotalPrice=productTotalPrice.add(total);
+            double total= product.getQuantity()*product.getPrice();
+            productTotalPrice=productTotalPrice.add(BigDecimal.valueOf(total));
         }
         var getCampaignProductDTOs = productInfos.stream()
                 .map(campaignProductInfoDtoConverter::convert)
@@ -127,7 +124,7 @@ public class BasketManagerImpl implements BasketManager {
     private void UpdateBasketInfoWithCampaign(GetCampaignResponse getCampaignResponse, long customerId) {
 
         CampaignDTO campaign = getCampaignResponse.getCampaignDTO();
-        basketService.addCampaignToBasket(customerId, campaign.getDisplayName(), campaign.getPrice());
+        basketService.addCampaignToBasket(customerId, campaign.getDisplayName(), BigDecimal.valueOf(campaign.getPrice()));
     }
 
     @Override
@@ -136,5 +133,15 @@ public class BasketManagerImpl implements BasketManager {
         var basket = basketService.getByCustomerId(getBasketRequest.getCustomerId());
         var basketDTO = basketDtoConverter.convert(basket);
         return new GetBasketResponse(basketDTO);
+    }
+
+    @Override
+    public void productPriceChange(ChangeProductPriceRequest changeProductPriceRequest) {
+        basketService.changeProductPrice(changeProductPriceRequest.getProductId(),changeProductPriceRequest.getNewPrice());
+    }
+
+    @Override
+    public void productStockChange(ChangeProductStockRequest changeProductStockRequest) {
+        basketService.changeProductStock(changeProductStockRequest.getProductId(),changeProductStockRequest.getNewQuantity());
     }
 }

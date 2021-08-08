@@ -40,11 +40,10 @@ public class RedisConnectionTest {
     public void addToBasket(){
       //  basketCrudRepository.deleteById(2L);
         AddToBasketRequest request=new AddToBasketRequest();
-        request.setCustomerId(2);
-        request.setQuantity(20);
+        request.setCustomerId(3);
+        request.setQuantity(3);
         request.setProductId("d16966bc-dc34-40cc-8743-cc4cd98168e3");
         AddToBasketResponse response= basketManager.add(request);
         //assertTrue(response.g);
-
     }
 }

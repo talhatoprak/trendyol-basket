@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public class BasketCampaign {
     private String displayName;
-    private BigDecimal price;
+    private double price;
 
-    public BasketCampaign(String displayName, BigDecimal price) {
+    public BasketCampaign(String displayName, double price) {
         this.displayName = displayName;
         this.price = price;
     }
@@ -15,7 +15,7 @@ public class BasketCampaign {
         return displayName;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 }

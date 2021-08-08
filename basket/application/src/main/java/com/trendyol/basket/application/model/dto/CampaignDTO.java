@@ -4,12 +4,12 @@ import java.math.BigDecimal;
 
 public class CampaignDTO {
     private String displayName;
-    private BigDecimal price;
+    private double price;
 
     public CampaignDTO() {
     }
 
-    public CampaignDTO(String displayName, BigDecimal price) {
+    public CampaignDTO(String displayName, double price) {
         this.displayName = displayName;
         this.price = price;
     }
@@ -18,7 +18,7 @@ public class CampaignDTO {
         return displayName;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 }

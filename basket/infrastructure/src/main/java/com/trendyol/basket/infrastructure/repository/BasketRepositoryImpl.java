@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,7 +33,9 @@ public class BasketRepositoryImpl implements  BasketRepository  {
 
     @Override
     public Optional<List<Basket>> findByProductId(String productId) {
+        Optional<List<Basket>> optionalBasketList=basketCrudRepository.findByProductId(productId);
+        var list = optionalBasketList.get();
 
-        return this.basketCrudRepository.findAllByProductsIsInProductId(productId);
+        return optionalBasketList;
     }
 }

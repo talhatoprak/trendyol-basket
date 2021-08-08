@@ -12,8 +12,8 @@ public class BasketItem implements Serializable {
     private String title;
     private String imageUrl;
     private int quantity;
-    private BigDecimal oldPrice;
-    private BigDecimal price;
+    private double oldPrice;
+    private double price;
 
     public BasketItem() {
     }
@@ -23,8 +23,8 @@ public class BasketItem implements Serializable {
         this.title = title;
         this.imageUrl = imageUrl;
         this.quantity = quantity;
-        this.oldPrice = oldPrice;
-        this.price = price;
+        this.oldPrice = oldPrice.doubleValue();
+        this.price = price.doubleValue();
     }
 
     public String getProductId() {
@@ -35,7 +35,7 @@ public class BasketItem implements Serializable {
         return quantity;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
     public void increaseBasketItem(){
@@ -69,15 +69,15 @@ public class BasketItem implements Serializable {
         this.quantity = quantity;
     }
 
-    public BigDecimal getOldPrice() {
+    public double getOldPrice() {
         return oldPrice;
     }
 
-    public void setOldPrice(BigDecimal oldPrice) {
+    public void setOldPrice(double oldPrice) {
         this.oldPrice = oldPrice;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

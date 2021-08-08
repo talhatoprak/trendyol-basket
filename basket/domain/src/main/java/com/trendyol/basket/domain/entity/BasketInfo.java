@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasketInfo {
-    private BigDecimal subTotal;
+    private double subTotal;
     private BasketCampaign basketCampaigns;
-    private BigDecimal grandTotal;
+    private double grandTotal;
 
     public BasketInfo() {
     }
@@ -23,7 +23,7 @@ public class BasketInfo {
         updateSubTotal(productInfos);
     }
 
-    public BigDecimal getSubTotal() {
+    public double getSubTotal() {
         return subTotal;
     }
 
@@ -31,14 +31,14 @@ public class BasketInfo {
         return basketCampaigns;
     }
 
-    public BigDecimal getGrandTotal() {
+    public double getGrandTotal() {
         return grandTotal;
     }
 
     public void updateSubTotal(List<BasketItem> productInfoList){
         subTotal = productInfoList.stream()
-                .map(productInfo -> productInfo.getPrice().multiply(BigDecimal.valueOf(productInfo.getQuantity())))
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
+                .map(productInfo -> productInfo.getPrice()*productInfo.getQuantity())
+                .reduce(0D,Double::sum);
     }
 
     public void updateGrandTotalWithCampaign(String campaignDisplayName, BigDecimal campaignPrice){
@@ -46,11 +46,11 @@ public class BasketInfo {
             throw new BasketInfoValidationException();
         }
         addCampaign(campaignDisplayName, campaignPrice);
-        grandTotal = basketCampaigns.getPrice().add(subTotal);
+        grandTotal = basketCampaigns.getPrice() + subTotal;
     }
 
     private void addCampaign(String displayName, BigDecimal price){
-        var campaign = new BasketCampaign(displayName, price);
+        var campaign = new BasketCampaign(displayName, price.doubleValue());
         basketCampaigns=campaign;
     }
 

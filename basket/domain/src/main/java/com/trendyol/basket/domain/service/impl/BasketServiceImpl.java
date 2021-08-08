@@ -3,6 +3,7 @@ package com.trendyol.basket.domain.service.impl;
 import com.trendyol.basket.domain.entity.Basket;
 import com.trendyol.basket.domain.entity.BasketItem;
 import com.trendyol.basket.domain.exception.BasketNotFoundException;
+import com.trendyol.basket.domain.exception.ProductNotFoundException;
 import com.trendyol.basket.domain.repository.BasketRepository;
 import com.trendyol.basket.domain.service.BasketService;
 import org.springframework.stereotype.Service;
@@ -70,7 +71,6 @@ public class BasketServiceImpl implements BasketService {
     }
 
 
-
     @Override
     public List<Basket> getByProductId(String productId) {
         var optionalBaskets = basketRepository.findByProductId(productId);
@@ -79,5 +79,31 @@ public class BasketServiceImpl implements BasketService {
         }
         var baskets = optionalBaskets.get();
         return baskets;
+    }
+
+    @Override
+    public void changeProductPrice(String productId, BigDecimal price) {
+        List<Basket> basketList = getByProductId(productId);
+        for (int i = 0; i < basketList.size(); i++) {
+            Basket basket = basketList.get(i);
+            basket.setProductPrice(productId, price);
+            basketRepository.save(basket);
+        }
+    }
+
+    @Override
+    public void changeProductStock(String productId, int newQuantity) {
+        List<Basket> basketList = getByProductId(productId);
+        for (int i = 0; i < basketList.size(); i++) {
+            Basket basket = basketList.get(i);
+            BasketItem item = basket.getProducts().stream()
+                    .filter(productInfo -> productInfo.getProductId().equals(productId))
+                    .findFirst()
+                    .orElseThrow(ProductNotFoundException::new);
+            if (item.getQuantity() > newQuantity) {
+                basket.setProductQuantity(productId, newQuantity);
+                basketRepository.save(basket);
+            }
+        }
     }
 }
