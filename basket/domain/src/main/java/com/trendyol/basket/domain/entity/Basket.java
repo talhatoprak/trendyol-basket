@@ -4,6 +4,7 @@ import com.couchbase.client.java.repository.annotation.Field;
 import com.trendyol.basket.domain.exception.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.couchbase.core.mapping.Document;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class Basket implements Serializable {
     @Id
     private long customerId;
     @Field
+    @Indexed
     private List<BasketItem> products;
     @Field
     private BasketInfo basketInfo;

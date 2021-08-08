@@ -148,6 +148,8 @@ public class BasketManagerImpl implements BasketManager {
         double oldPrice=changeProductPriceRequest.getOldPrice();
         double price=changeProductPriceRequest.getNewPrice();
         List<Basket> basketList=basketService.getByProductId(changeProductPriceRequest.getProductId());
+        if(basketList.size()==0)
+            return;
         BasketItem item=basketList.get(0).getProducts()
                 .stream()
                 .filter(f->f.getProductId()
@@ -200,11 +202,7 @@ public class BasketManagerImpl implements BasketManager {
 
     public void sendPriceDropMail(long customerId,String productName,double oldPrice,double newPrice){
        GetCustomerResponse response= customerService.get(customerId);
-       String text=String.format("Sayın %s, sepetinize eklediğiniz %s adlı ürünün fiyatı %d' den %d'ye düşmüştür.",
-               response.getFullName(),
-               productName,
-               oldPrice,
-               newPrice);
+       String text="Sayın "+response.getFullName()+", sepetinize eklediğiniz "+productName+" adlı ürünün fiyatı "+oldPrice+"' den "+newPrice+"'ye düşmüştür.";
        emailService.sendSimpleMessage(response.getEmail(),"Sepetinizdeki ürünün fiyatı düştü",text);
     }
     public void sendOutOfStockMail(long customerId,String productName){
@@ -216,9 +214,8 @@ public class BasketManagerImpl implements BasketManager {
     }
     public void sendRemainingStockMail(long customerId,String productName,int quantity){
         GetCustomerResponse response= customerService.get(customerId);
-        String text=String.format("Sayın %s, sepetinize eklediğiniz %s adlı ürün son %d adet kalmıştır.",
-                response.getFullName(),
-                productName);
+
+        String text="Sayın "+response.getFullName()+", sepetinize eklediğiniz "+productName+" adlı ürün son "+quantity+" adet kalmıştır.";
         emailService.sendSimpleMessage(response.getEmail(),"Sepetinizdeki ürünün stokta kalmamıştır",text);
     }
 }

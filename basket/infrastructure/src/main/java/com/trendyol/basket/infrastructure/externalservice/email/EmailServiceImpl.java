@@ -16,7 +16,7 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public void sendSimpleMessage(String to, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("noreply@trendyol.com");
+        message.setFrom("trendyol.bootcamp.final.project@gmail.com");
         message.setTo(to);
         message.setSubject(subject);
         message.setText(text);

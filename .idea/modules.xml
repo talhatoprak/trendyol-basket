@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/basket/basket.iml" filepath="$PROJECT_DIR$/basket/basket.iml" />
       <module fileurl="file://$PROJECT_DIR$/campaign/campaign.iml" filepath="$PROJECT_DIR$/campaign/campaign.iml" />
       <module fileurl="file://$PROJECT_DIR$/basket/domain/domain.iml" filepath="$PROJECT_DIR$/basket/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-service/ecom.iml" filepath="$PROJECT_DIR$/product-service/ecom.iml" />
       <module fileurl="file://$PROJECT_DIR$/basket/infrastructure/infrastructure.iml" filepath="$PROJECT_DIR$/basket/infrastructure/infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/trendol-final-project.iml" filepath="$PROJECT_DIR$/.idea/trendol-final-project.iml" />
     </modules>

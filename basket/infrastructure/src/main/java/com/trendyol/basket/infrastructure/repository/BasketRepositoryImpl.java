@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class BasketRepositoryImpl implements  BasketRepository  {
@@ -33,9 +34,12 @@ public class BasketRepositoryImpl implements  BasketRepository  {
 
     @Override
     public Optional<List<Basket>> findByProductId(String productId) {
-        Optional<List<Basket>> optionalBasketList=basketCrudRepository.findByProductId(productId);
-        var list = optionalBasketList.get();
+        //Todo: CrudRepository icerisindeki query duzeltildikten sonra repository icerisindeki findAllById metodu kullanilacak
+        List<Basket> basketList=basketCrudRepository.findAll();
+        basketList=basketList.stream()
+                .filter(f->f.getProducts().stream().anyMatch(product->product.getProductId().equals(productId)))
+                .collect(Collectors.toList());
 
-        return optionalBasketList;
+        return Optional.of(basketList);
     }
 }
